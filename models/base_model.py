@@ -7,12 +7,9 @@ from datetime import datetime
 
 class BaseModel:
     """Simple Base Model class"""
-    def __init__(self, *args, **kwargs):
-        """initialize imprtant instance attribute"""
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.today()
-        self.updated_at = datetime.today()
-        """dictionary representation of an instance (method to_dict())."""
+    id = str(uuid.uuid4())
+    created_at = datetime.today()
+    updated_at = datetime.today()
 
     def save(self):
         """Update the current datetime"""
